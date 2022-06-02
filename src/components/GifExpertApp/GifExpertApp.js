@@ -1,5 +1,6 @@
 import React from "react";
 import { AddGif } from "../AddGif/AddGif";
+import { GifGrid } from "../GifGrid/GifGrid";
 
 export const GifExpertApp = () => {
   const [gifs, setGifs] = React.useState(["One Punch"]);
@@ -9,12 +10,9 @@ export const GifExpertApp = () => {
       <AddGif setGifs={setGifs} />
       <hr />
       <ol>
-        {gifs.map(
-          (gif, idx) => (
-            <li key={idx}>{gif}</li>
-          ),
-          this
-        )}
+        {gifs.map((gif) => (
+          <GifGrid key={gif} gif={gif} />
+        ))}
       </ol>
     </div>
   );
