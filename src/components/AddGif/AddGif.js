@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { PropTypes } from "prop-types";
 
 export const AddGif = ({ setGifs }) => {
@@ -17,11 +17,11 @@ export const AddGif = ({ setGifs }) => {
     }
   };
   return (
-    <>
+    <Fragment>
       <form onSubmit={handleSubmit}>
         <input type="text" value={inputValue} onChange={handleInputChange} />
       </form>
-    </>
+    </Fragment>
   );
 };
 

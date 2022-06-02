@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { GifExpertApp } from "../GifExpertApp/GifExpertApp";
 import "./Navbar.css";
 
@@ -12,6 +12,7 @@ export const Navbar = () => {
   };
 
   // TODO - Add a 🌙 or a 🌞 icon in the navbar btn to toggle the theme
+  // TODO - Link to the codepen https://codepen.io/davidhaz/pen/eYVWyEW
   const toggleTheme = () => {
     const currentTheme = localStorage.getItem("theme");
     if (currentTheme === "dark") {
@@ -31,10 +32,10 @@ export const Navbar = () => {
   setThemeOnInit();
 
   return (
-    <>
+    <Fragment>
       <h2>GifExpertApp</h2>
       <button onClick={toggleTheme}></button>
       <GifExpertApp />
-    </>
+    </Fragment>
   );
 };

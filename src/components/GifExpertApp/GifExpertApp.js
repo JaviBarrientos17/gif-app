@@ -3,7 +3,7 @@ import { AddGif } from "../AddGif/AddGif";
 import { GifGrid } from "../GifGrid/GifGrid";
 
 export const GifExpertApp = () => {
-  const [gifs, setGifs] = React.useState(["One Punch"]);
+  const [gifs, setGifs] = React.useState([""]);
 
   return (
     <div>
