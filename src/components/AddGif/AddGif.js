@@ -12,7 +12,7 @@ export const AddGif = ({ setGifs }) => {
     e.preventDefault();
 
     if (inputValue.trim().length > 2) {
-        setGifs(gifs => [...gifs, inputValue]);
+        setGifs(gifs => [inputValue, ...gifs]);
         setInputValue("");
     }
   };
