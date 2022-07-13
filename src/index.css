@@ -1,5 +1,26 @@
-* {
+:root {
+  --black: rgb(0, 0, 0);
+  --blue: rgb(26, 57, 87);
+  --white: rgb(236, 236, 236);
+}
+body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
+}
+body.light {
+  --background-color: var(--white);
+  --text-color: var(--blue);
+  --font-weight: 400;
+  /* --image: url("./assets/sun.png"); */
+}
+body.dark {
+  --background-color: var(--blue);
+  --text-color: var(--white);
+  --font-weight: 400;
+  /* --image: url("./assets/moon.png"); */
 }
 input {
   color: grey;
